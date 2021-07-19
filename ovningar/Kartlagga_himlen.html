@@ -1,0 +1,791 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Att kartlägga stjärnhimlen - Vad finns ovanför oss? &#8212; Fysik</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://opendata-education.github.io/se_Fysik/intro.html/ovningar/Kartlagga_himlen.html" />
+    <link rel="shortcut icon" href="../_static/logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Statistiska beräkningar med CMS’ data." href="Statistikber%C3%A4kningar.html" />
+    <link rel="prev" title="Intro 4: Funktionsanpassning i Python" href="intro_4_funktion_i_python.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Fysik</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Välkommen att använda Open Data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Övningar
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro_1_jupyter_python.html">
+   Intro 1: Använd Jupyter Notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro_2_statistik_i_python.html">
+   Intro 2: Statistik i Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro_3_diagram_i_python.html">
+   Intro 3: Diagram i Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro_4_funktion_i_python.html">
+   Intro 4: Funktionsanpassning i Python
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Att kartlägga stjärnhimlen - Vad finns ovanför oss?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Statistikber%C3%A4kningar.html">
+   Statistiska beräkningar med CMS’ data.
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/ovningar/Kartlagga_himlen.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/opendata-education/se_Fysik"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/opendata-education/se_Fysik/issues/new?title=Issue%20on%20page%20%2Fovningar/Kartlagga_himlen.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/opendata-education/se_Fysik/main?urlpath=tree/material/ovningar/Kartlagga_himlen.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hur-ser-datan-ut">
+   Hur ser datan ut?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sag-mig-vem-som-klarast-pa-himlen-ar">
+   <em>
+    Säg mig vem som klarast på himlen är…
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stjarnbilder">
+   Stjärnbilder
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solen-den-narmsta-av-vara-stjarnor">
+   Solen, den närmsta av våra stjärnor
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="att-kartlagga-stjarnhimlen-vad-finns-ovanfor-oss">
+<h1>Att kartlägga stjärnhimlen - Vad finns ovanför oss?<a class="headerlink" href="#att-kartlagga-stjarnhimlen-vad-finns-ovanfor-oss" title="Permalink to this headline">¶</a></h1>
+<p>Stjärnornas skimmer har i all tid fängslat människan, men vad är det vi engentligen ser i det vackra, klara stjärntäcket?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kör denna cell först! Här finns funktionspaketen som behövs.</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vi tar in ett dataset med information om de tindrande punkterna. Informationen hittas, tillsammans med en klarare förklaring på adressen http://www.astronexus.com/hyg, i HYG-databasen. I stora drag innehåller tabellen sådana stjärnor och stjärnkluster som  är nära solen (nåja, “nära” i astronomiska termer. Inom en radie på 75 ljusår.) eller tillräckligt klara för att ses med blotta ögat.</p>
+<p>Vad står HYG för? Ta reda på!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># När du kör detta kommando läser vi in en stor katalog med information om stjärnorna.</span>
+<span class="c1"># informationen sparas som en DataFrame - en tabellvariabel.</span>
+<span class="c1"># Tack till Adam Lame för ett lättläst dataset.</span>
+
+<span class="n">himlen</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/adamlamee/CODINGinK12/master/data/stars.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="hur-ser-datan-ut">
+<h2>Hur ser datan ut?<a class="headerlink" href="#hur-ser-datan-ut" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Med detta kommando kan du få de första raderna av tabellen att synas.</span>
+<span class="c1"># Vad händer om du ändrar parametern i parentesen, eller tar bort den?</span>
+
+<span class="n">himlen</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>proper</th>
+      <th>ra</th>
+      <th>dec</th>
+      <th>dist</th>
+      <th>mag</th>
+      <th>absmag</th>
+      <th>ci</th>
+      <th>temp</th>
+      <th>x</th>
+      <th>y</th>
+      <th>z</th>
+      <th>con</th>
+      <th>lum</th>
+      <th>var</th>
+      <th>var_min</th>
+      <th>var_max</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Sol</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0000</td>
+      <td>-26.70</td>
+      <td>4.850</td>
+      <td>0.656</td>
+      <td>5756.588113</td>
+      <td>0.000005</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>NaN</td>
+      <td>1.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Proxima Centauri</td>
+      <td>14.495985</td>
+      <td>-62.679485</td>
+      <td>1.2959</td>
+      <td>11.01</td>
+      <td>15.447</td>
+      <td>1.807</td>
+      <td>3383.441193</td>
+      <td>-0.472264</td>
+      <td>-0.361451</td>
+      <td>-1.151219</td>
+      <td>Cen</td>
+      <td>0.000058</td>
+      <td>V645</td>
+      <td>11.079</td>
+      <td>10.939</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Rigil Kentaurus</td>
+      <td>14.660765</td>
+      <td>-60.833976</td>
+      <td>1.3248</td>
+      <td>-0.01</td>
+      <td>4.379</td>
+      <td>0.710</td>
+      <td>5567.728737</td>
+      <td>-0.495203</td>
+      <td>-0.414084</td>
+      <td>-1.156625</td>
+      <td>Cen</td>
+      <td>1.543121</td>
+      <td>NaN</td>
+      <td>0.113</td>
+      <td>-0.087</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>NaN</td>
+      <td>14.660346</td>
+      <td>-60.838300</td>
+      <td>1.3248</td>
+      <td>1.35</td>
+      <td>5.739</td>
+      <td>0.900</td>
+      <td>4996.415833</td>
+      <td>-0.495181</td>
+      <td>-0.413973</td>
+      <td>-1.156674</td>
+      <td>Cen</td>
+      <td>0.440961</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Barnard's Star</td>
+      <td>17.963472</td>
+      <td>4.693388</td>
+      <td>1.8238</td>
+      <td>9.54</td>
+      <td>13.235</td>
+      <td>1.570</td>
+      <td>3691.168543</td>
+      <td>-0.017373</td>
+      <td>-1.816613</td>
+      <td>0.149123</td>
+      <td>Oph</td>
+      <td>0.000443</td>
+      <td>V2500</td>
+      <td>9.590</td>
+      <td>9.490</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>NaN</td>
+      <td>10.941484</td>
+      <td>7.015320</td>
+      <td>2.3906</td>
+      <td>13.45</td>
+      <td>16.557</td>
+      <td>2.000</td>
+      <td>3169.353727</td>
+      <td>-2.282811</td>
+      <td>0.649334</td>
+      <td>0.292057</td>
+      <td>NaN</td>
+      <td>0.000021</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Lalande 21185</td>
+      <td>11.055632</td>
+      <td>35.969877</td>
+      <td>2.5469</td>
+      <td>7.49</td>
+      <td>10.460</td>
+      <td>1.502</td>
+      <td>3790.500746</td>
+      <td>-1.998000</td>
+      <td>0.504305</td>
+      <td>1.495504</td>
+      <td>UMa</td>
+      <td>0.005702</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>NaN</td>
+      <td>1.650199</td>
+      <td>-17.949782</td>
+      <td>2.6267</td>
+      <td>12.57</td>
+      <td>15.473</td>
+      <td>1.850</td>
+      <td>3333.196615</td>
+      <td>2.270499</td>
+      <td>1.046970</td>
+      <td>-0.809963</td>
+      <td>NaN</td>
+      <td>0.000056</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>NaN</td>
+      <td>1.650199</td>
+      <td>-17.949782</td>
+      <td>2.6267</td>
+      <td>12.70</td>
+      <td>15.603</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2.270631</td>
+      <td>1.047031</td>
+      <td>-0.810010</td>
+      <td>NaN</td>
+      <td>0.000050</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>NaN</td>
+      <td>6.752559</td>
+      <td>-16.715240</td>
+      <td>2.6371</td>
+      <td>8.44</td>
+      <td>11.334</td>
+      <td>-0.030</td>
+      <td>10515.561780</td>
+      <td>-0.494379</td>
+      <td>2.476814</td>
+      <td>-0.758470</td>
+      <td>CMa</td>
+      <td>0.002549</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Med detta kommando kan vi undersöka hur många rader tabellen innehåller.</span>
+
+<span class="nb">len</span><span class="p">(</span><span class="n">himlen</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>119614
+</pre></div>
+</div>
+</div>
+</div>
+<p>I tabellen kan vi se några kryptiska kolumner. Noggrannare förklaringar kan vi hitta från <a class="reference external" href="http://www.astronexus.com/hyg">Astronexus’ hemsida</a>, men de viktigaste är stjärnornas positionsinformation (<a class="reference external" href="https://sv.wikipedia.org/wiki/Rektascension">rektascension</a> “ra”, <a class="reference external" href="https://sv.wikipedia.org/wiki/Deklination_(astronomi)">deklination</a> “dec, avstånd “dist”) och de storheter som hör ihop med ljusstyrkan. (<a class="reference external" href="https://sv.wikipedia.org/wiki/Skenbar_magnitud">skenbar magnitud</a> “mag”, <a class="reference external" href="https://sv.wikipedia.org/wiki/Absolut_magnitud">absolut magnitud</a> “absmag”, temperatur “temp” och <a class="reference external" href="https://sv.wikipedia.org/wiki/Luminositet">luminositet</a> “lum”).</p>
+<p>Nu ska vi undersöka vad denna tabell kan visa oss.</p>
+</div>
+<div class="section" id="sag-mig-vem-som-klarast-pa-himlen-ar">
+<h2><em>Säg mig vem som klarast på himlen är…</em><a class="headerlink" href="#sag-mig-vem-som-klarast-pa-himlen-ar" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Här tar vi två kolumner ur vår DataFrame &quot;himlen&quot; och skapar ett diagram utgående från deras värdepar.</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">himlen</span><span class="o">.</span><span class="n">ra</span><span class="p">,</span> <span class="n">himlen</span><span class="o">.</span><span class="n">dec</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span> <span class="c1"># Vilken information använder vi här?</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Positioner för alla katalogens stjärnor, sett från jorden </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;skala och arpeggio&#39;</span><span class="p">)</span> <span class="c1"># Ändra till ett passande namn för x-axeln!</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Jag mäter, därför existerar jag&#39;</span><span class="p">)</span> <span class="c1"># Ändra till ett passande namn för y-axeln!</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Ser du några former eller mönster i grafen? Vad kan de bero på?</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Kartlagga_himlen_10_0.png" src="../_images/Kartlagga_himlen_10_0.png" />
+</div>
+</div>
+<p>Vi klassar ofta stjärnor enligt deras temperatur och ljusstyrka på så sätt att en starkare stjärna har en mindre absolut magnitud. Vår sol har en absolut magnitud på 4,8.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vi ritar ännu en scatter-plot över x- och y-par.</span>
+<span class="c1"># Vi justerar punkternas storlekar så att vi lyckas urskilja något från grafen</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">himlen</span><span class="o">.</span><span class="n">temp</span><span class="p">,</span> <span class="n">himlen</span><span class="o">.</span><span class="n">absmag</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">edgecolors</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span><span class="mi">15000</span><span class="p">)</span> <span class="c1"># Vad händer om du ändrar dessa siffror?</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="o">-</span><span class="mi">15</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Hitta på en passande titel </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># Skriv något passande.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Absolut magnitud&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Yttemperatur (K)&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Kartlagga_himlen_12_0.png" src="../_images/Kartlagga_himlen_12_0.png" />
+</div>
+</div>
+<p>Kan du urskilja området med <em>röda jättar</em>, stjärnor som lyser klart, men har låg yttemperatur?</p>
+<p>Kan du urskilja området med <em>vita dvärgar</em>, stjärnor som är mycket varma och klara?</p>
+</div>
+<div class="section" id="stjarnbilder">
+<h2>Stjärnbilder<a class="headerlink" href="#stjarnbilder" title="Permalink to this headline">¶</a></h2>
+<p>En stjärna kommer sällan ensam. Oftast hör stjärnorna till en större stjärngrupp, och dessa stjärngrupper har fått olika namn i olika kulturer genom mänsklighetens historia. De benämningar som används idag är av Europeiskt ursprung och hittas i kolumnen <strong>con</strong> (constellation, stjärnbild) i vår tabell.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Denna funktion plockar alla olika värden ur tabellens kolumn con, och listar dem i alfabetisk ordning.</span>
+
+<span class="n">himlen</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;con&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">con</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;And&#39;, &#39;Ant&#39;, &#39;Aps&#39;, &#39;Aql&#39;, &#39;Aqr&#39;, &#39;Ara&#39;, &#39;Ari&#39;, &#39;Aur&#39;, &#39;Boo&#39;,
+       &#39;CMa&#39;, &#39;CMi&#39;, &#39;CVn&#39;, &#39;Cae&#39;, &#39;Cam&#39;, &#39;Cap&#39;, &#39;Car&#39;, &#39;Cas&#39;, &#39;Cen&#39;,
+       &#39;Cep&#39;, &#39;Cet&#39;, &#39;Cha&#39;, &#39;Cir&#39;, &#39;Cnc&#39;, &#39;Col&#39;, &#39;Com&#39;, &#39;CrA&#39;, &#39;CrB&#39;,
+       &#39;Crt&#39;, &#39;Cru&#39;, &#39;Crv&#39;, &#39;Cyg&#39;, &#39;Del&#39;, &#39;Dor&#39;, &#39;Dra&#39;, &#39;Equ&#39;, &#39;Eri&#39;,
+       &#39;For&#39;, &#39;Gem&#39;, &#39;Gru&#39;, &#39;Her&#39;, &#39;Hor&#39;, &#39;Hya&#39;, &#39;Hyi&#39;, &#39;Ind&#39;, &#39;LMi&#39;,
+       &#39;Lac&#39;, &#39;Leo&#39;, &#39;Lep&#39;, &#39;Lib&#39;, &#39;Lup&#39;, &#39;Lyn&#39;, &#39;Lyr&#39;, &#39;Men&#39;, &#39;Mic&#39;,
+       &#39;Mon&#39;, &#39;Mus&#39;, &#39;Nor&#39;, &#39;Oct&#39;, &#39;Oph&#39;, &#39;Ori&#39;, &#39;Pav&#39;, &#39;Peg&#39;, &#39;Per&#39;,
+       &#39;Phe&#39;, &#39;Pic&#39;, &#39;PsA&#39;, &#39;Psc&#39;, &#39;Pup&#39;, &#39;Pyx&#39;, &#39;Ret&#39;, &#39;Scl&#39;, &#39;Sco&#39;,
+       &#39;Sct&#39;, &#39;Ser&#39;, &#39;Sex&#39;, &#39;Sge&#39;, &#39;Sgr&#39;, &#39;Tau&#39;, &#39;Tel&#39;, &#39;TrA&#39;, &#39;Tri&#39;,
+       &#39;Tuc&#39;, &#39;UMa&#39;, &#39;UMi&#39;, &#39;Vel&#39;, &#39;Vir&#39;, &#39;Vol&#39;, &#39;Vul&#39;, nan], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nu ska vi testa att plocka ut alla stjärnor som tillhör en bestämd stjärnbild, och jämföra dem med de tidigare graferna.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Denna kod väljer ut en bestämd stjärnbild. Byt ut förkortningen nedan och testa själv!</span>
+
+
+
+<span class="c1"># Tämä näyttää yhden tähdistön, vaihda kysyttyä lyhennettä alla ja tutki muitakin!</span>
+<span class="c1"># Kommandot .query(&#39;...&#39;) låter oss leta data enligt givna krav från hela tabellen.</span>
+
+
+<span class="n">constellation</span> <span class="o">=</span> <span class="n">himlen</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;con == &quot;UMa&quot;&#39;</span><span class="p">)</span>
+
+<span class="c1"># Vi använder &quot;subplot&quot;-funktionen för att rita flera diagram samtidigt.</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Här skriver vi en rad som väljer ut de 10 starkaste stjärnorna i stjärnbilden.</span>
+<span class="c1"># Vad händer om du ändrar parametern i .head()-kommandot?</span>
+
+<span class="n">constellation</span> <span class="o">=</span> <span class="n">constellation</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;mag&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">constellation</span><span class="o">.</span><span class="n">ra</span><span class="p">,</span> <span class="n">constellation</span><span class="o">.</span><span class="n">dec</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">invert_xaxis</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Stjärnbildens formation på himlen </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Rektascension&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Deklination&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Okej, men hur förhåller dessa stjärnor till resten av stjärnhimlen?</span>
+<span class="c1"># Nu markerar vi stjärnbildens klaraste stjärnor på magnitudkartan.</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">himlen</span><span class="o">.</span><span class="n">temp</span><span class="p">,</span> <span class="n">himlen</span><span class="o">.</span><span class="n">absmag</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">edgecolors</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">constellation</span><span class="o">.</span><span class="n">temp</span><span class="p">,</span> <span class="n">constellation</span><span class="o">.</span><span class="n">absmag</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">edgecolors</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span><span class="mi">15000</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="o">-</span><span class="mi">15</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Jämfört med hela stjärnhimlen </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Absolut magnitud&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Temperatur (K)&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Kartlagga_himlen_18_0.png" src="../_images/Kartlagga_himlen_18_0.png" />
+</div>
+</div>
+<p>Känner du igen stjärnbilden? Testa om du hittar andra stjärnbilder du känner igen - eller googla stjärnbilderna och jämför, ifall du inte vet hur de bör se ut.</p>
+<p>Var placerar sig stjärnorna i denna bild över stjärnornas livscykler (Hertzsprung-Russell-diagram)?</p>
+<img alt="https://8green2017.files.wordpress.com/2013/04/hr_diagram.jpg" src="https://8green2017.files.wordpress.com/2013/04/hr_diagram.jpg" />
+</div>
+<div class="section" id="solen-den-narmsta-av-vara-stjarnor">
+<h2>Solen, den närmsta av våra stjärnor<a class="headerlink" href="#solen-den-narmsta-av-vara-stjarnor" title="Permalink to this headline">¶</a></h2>
+<p>Solen är på många sätt viktig för människan. Den är källan till liv på jorden, såväl som källan till ny information när vi försöker få reda på mer om hur stjärnorna fungerar. Jämfört med allt annat i vårt solsystem är solen gigantisk, men bland stjärnorna är den inte märkvärdig. Vi undersöker hur den jämför sig med de andra stjärnorna:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Solen, &quot;Sol&quot;, kan hittas med ett sökkommando.</span>
+
+<span class="n">solen</span> <span class="o">=</span> <span class="n">himlen</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;proper == &quot;Sol&quot;&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">solen</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  proper   ra  dec  dist   mag  absmag     ci         temp         x    y  \
+0    Sol  0.0  0.0   0.0 -26.7    4.85  0.656  5756.588113  0.000005  0.0   
+
+     z  con  lum  var  var_min  var_max  
+0  0.0  NaN  1.0  NaN      NaN      NaN  
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Om vi nu vill jämföra solens temperatur med de andra...</span>
+
+<span class="n">storre</span> <span class="o">=</span> <span class="n">himlen</span><span class="p">[</span><span class="n">himlen</span><span class="o">.</span><span class="n">temp</span> <span class="o">&gt;</span> <span class="nb">float</span><span class="p">(</span><span class="n">solen</span><span class="o">.</span><span class="n">temp</span><span class="p">)]</span> <span class="c1"># Här behövs float() för att ändra elementets format.</span>
+                                                    <span class="c1"># Bägge talen som jämförs behöver vara flyttal.</span>
+<span class="n">mindre</span> <span class="o">=</span> <span class="n">himlen</span><span class="p">[</span><span class="n">himlen</span><span class="o">.</span><span class="n">temp</span> <span class="o">&lt;</span> <span class="nb">float</span><span class="p">(</span><span class="n">solen</span><span class="o">.</span><span class="n">temp</span><span class="p">)]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I tabellen finns &quot;</span> <span class="o">+</span> <span class="nb">repr</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">storre</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot; stjärnor varmare än Solen.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I tabellen finns &quot;</span> <span class="o">+</span> <span class="nb">repr</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mindre</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot; stjärnor kallare än Solen.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I tabellen finns 62067 stjärnor varmare än Solen.
+I tabellen finns 55591 stjärnor kallare än Solen.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Kan du ändra koden ovan för att jämföra Solens och de övriga stjärnornas relativa och absoluta magnitud?</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./ovningar"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="intro_4_funktion_i_python.html" title="previous page">Intro 4: Funktionsanpassning i Python</a>
+    <a class='right-next' id="next-link" href="Statistikber%C3%A4kningar.html" title="next page">Statistiska beräkningar med CMS’ data.</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By HIP Education and Open Data Team<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a>Materialet utvecklas med stöd av utbildningsstyrelsen.</a></br><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="license" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> Tämän sivuston materiaali on käytettävissä seuraavalla lisenssillä: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY 4.0.</a>
+</div>    
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

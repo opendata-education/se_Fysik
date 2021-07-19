@@ -1,0 +1,489 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Statistiska beräkningar med CMS’ data. &#8212; Fysik</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="canonical" href="https://opendata-education.github.io/se_Fysik/intro.html/ovningar/Statistikberäkningar.html" />
+    <link rel="shortcut icon" href="../_static/logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Att kartlägga stjärnhimlen - Vad finns ovanför oss?" href="Kartlagga_himlen.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Fysik</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Välkommen att använda Open Data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Övningar
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro_1_jupyter_python.html">
+   Intro 1: Använd Jupyter Notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro_2_statistik_i_python.html">
+   Intro 2: Statistik i Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro_3_diagram_i_python.html">
+   Intro 3: Diagram i Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro_4_funktion_i_python.html">
+   Intro 4: Funktionsanpassning i Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Kartlagga_himlen.html">
+   Att kartlägga stjärnhimlen - Vad finns ovanför oss?
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Statistiska beräkningar med CMS’ data.
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/ovningar/Statistikberäkningar.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/opendata-education/se_Fysik"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/opendata-education/se_Fysik/issues/new?title=Issue%20on%20page%20%2Fovningar/Statistikberäkningar.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/opendata-education/se_Fysik/main?urlpath=tree/material/ovningar/Statistikberäkningar.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vi-ritar-ett-histogram">
+   Vi ritar ett histogram
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#medeltal-bar-x">
+   Medeltal
+   <span class="math notranslate nohighlight">
+    \(\bar x\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#varians-sigma-2">
+   Varians
+   <span class="math notranslate nohighlight">
+    \(\sigma^2\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#standardavvikelse-sigma">
+   Standardavvikelse
+   <span class="math notranslate nohighlight">
+    \(\sigma\)
+   </span>
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="statistiska-berakningar-med-cms-data">
+<h1>Statistiska beräkningar med CMS’ data.<a class="headerlink" href="#statistiska-berakningar-med-cms-data" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>För mer information om vad CMS är, och varför vi använder oss av dess data kan du läsa <em>CMS och Open Data</em>-dokumentet i <a class="reference external" href="https://github.com/cms-opendata-education/cms-jupyter-materials-swedish/tree/main/Verktyg">denna mapp</a>.</p>
+</div></blockquote>
+<p>Med hjälp av Python kan vi enkelt beräkna statistiska karakteristika, så som medeltal, varians och stanardavvikelse för statistiska datasets. För dessa exempel kommer vi att använda oss av CMS’ kollisionsdata i filen <em>Jpsimumu</em>_<em>Run2011A.csv</em>.
+Filen består av genom bestämda kriterier <span class="math notranslate nohighlight">\(^{[1]}\)</span> utvalda kollisionsdata från CMS’ DoubleMu-dataset <span class="math notranslate nohighlight">\(^{[2]}\)</span> från 2011.</p>
+<p>Vi börjar beräkningarna genom att hämta in de nödvändiga modulerna och datan, och genom att välja ut värdena för <em>invariant massa</em> ur tabellen.</p>
+<br>
+<br>
+<small>
+[1] Thomas McCauley (2016). Jpsimumu. Jupyter Notebook file. https://github.com/tpmccauley/cmsopendata-jupyter/blob/hst-0.1/Jpsimumu.ipynb.
+<br>
+[2] CMS collaboration (2016). DoubleMu primary dataset in AOD format from RunA of 2011 (/DoubleMu/Run2011A-12Oct2013-v1/AOD). CERN Open Data Portal. DOI: [10.7483/OPENDATA.CMS.RZ34.QR6N](http://doi.org/10.7483/OPENDATA.CMS.RZ34.QR6N).
+</small><div class="section" id="vi-ritar-ett-histogram">
+<h2>Vi ritar ett histogram<a class="headerlink" href="#vi-ritar-ett-histogram" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vi hämtar in de nödvändiga paketen</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>             <span class="c1"># Innehåller funktioner för att läsa datafiler</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>              <span class="c1"># Innehåller funktioner för att göra beräkningar</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> <span class="c1"># Innehåller funktioner för att rita grafer</span>
+
+<span class="c1"># Sedan skapar vi variabeln &quot;dataset&quot; och läser in datan dit.</span>
+<span class="c1"># Vi skapar också variabeln inv_massa och väljer ut kolumnen &#39;M&#39; ur &#39;dataset&#39;.</span>
+
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/cms-opendata-education/cms-jupyter-materials-finnish/master/Data/Jpsimumu_Run2011A.csv&#39;</span><span class="p">)</span>
+<span class="n">inv_massa</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Vi ritar ett histogram baserat på datasetets invarianta massor.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">inv_massa</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Statistikberäkningar_5_0.png" src="../_images/Statistikberäkningar_5_0.png" />
+</div>
+</div>
+<p>Nu vill vi undersöka området kring den stora piken. Vi avgränsar de närmsta värdena och sparar dem som en variabel ‘pikdata’ och sparar de motsvarande invarianta massorna som ‘pik_invmassa’</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pikdata</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[(</span><span class="n">inv_massa</span><span class="o">&gt;</span><span class="mf">3.0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">inv_massa</span><span class="o">&lt;</span><span class="mf">3.2</span><span class="p">)]</span> <span class="c1"># Vi ser att piken ligger ungefär vid 3.1, så vi sätter gränserna nära.</span>
+<span class="n">pik_invmassa</span> <span class="o">=</span> <span class="n">pikdata</span><span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">pik_invmassa</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Statistikberäkningar_7_0.png" src="../_images/Statistikberäkningar_7_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="medeltal-bar-x">
+<h2>Medeltal <span class="math notranslate nohighlight">\(\bar x\)</span><a class="headerlink" href="#medeltal-bar-x" title="Permalink to this headline">¶</a></h2>
+<p>Medeltalsberäkning går smidigt i python genom att vi använder <strong>numpy</strong>-paketets <strong>mean()</strong>-funktion. Vi beräknar ett medeltal för datasetet med alla invarianta massor.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">medeltal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">inv_massa</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">medeltal</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.084373634453781
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vi jämför detta medeltal med medeltalet för <em>‘pik_invmassa’</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pik_medeltal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">pik_invmassa</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pik_medeltal</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.0934255293362805
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="varians-sigma-2">
+<h2>Varians <span class="math notranslate nohighlight">\(\sigma^2\)</span><a class="headerlink" href="#varians-sigma-2" title="Permalink to this headline">¶</a></h2>
+<p>Variansen är ett mått på värdenas spridning. En låg varians innebär att värdena är koncentrerade. En hög varians innebär att värdena är mycket spridda. Det finns en formel för hur vi beräknar varians: $<span class="math notranslate nohighlight">\(\sigma^2 = \frac{\sum_{i=1}^{n}(x_i-\bar{x})^2}{n}.\)</span>$</p>
+<p>Python gör detta arbete lättare. Vi kan berälkna variansen för ett dataset genom att använda <strong>numpy</strong>s funktion <strong>var()</strong>. Vi beräknar variansen för alla invarianta massor.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">varians</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">inv_massa</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">varians</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.3921691908895594
+</pre></div>
+</div>
+</div>
+</div>
+<p>…och så gör vi samma beräkning i området nära piken.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pik_varians</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">pik_invmassa</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pik_varians</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.001290814368485398
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="standardavvikelse-sigma">
+<h2>Standardavvikelse <span class="math notranslate nohighlight">\(\sigma\)</span><a class="headerlink" href="#standardavvikelse-sigma" title="Permalink to this headline">¶</a></h2>
+<p>Standardavvikelsen är också ett mått på spridning, och beräknas som kvadratroten av variansen. För att beräkna den använder vi <strong>numpy</strong>s funktion <strong>sqrt()</strong>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">standardavvikelse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">varians</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">standardavvikelse</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.6262341342417861
+</pre></div>
+</div>
+</div>
+</div>
+<p>…och i pikens närområde.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pik_standardavvikelse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">pik_varians</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pik_standardavvikelse</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.03592790515025052
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vi märker att spridningsmåtten har mycket större värden när vi använder det dataset som inte var begränsat, medan båda dataseten gav nästan samma medeltal.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./ovningar"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="Kartlagga_himlen.html" title="previous page">Att kartlägga stjärnhimlen - Vad finns ovanför oss?</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By HIP Education and Open Data Team<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a>Materialet utvecklas med stöd av utbildningsstyrelsen.</a></br><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="license" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> Tämän sivuston materiaali on käytettävissä seuraavalla lisenssillä: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY 4.0.</a>
+</div>    
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
