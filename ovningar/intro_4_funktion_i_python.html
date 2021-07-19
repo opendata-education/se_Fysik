@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Intro 3: Funktionsanpassning i Python &#8212; Fysik</title>
+    <title>Intro 4: Funktionsanpassning i Python &#8212; Fysik</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -37,14 +37,11 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -52,11 +49,13 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://opendata-education.github.io/se_Fysik/intro.html/ovningar/intro_4_funktion_i_python.html" />
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Intro 3: Diagram i Python" href="intro_3_diagram_i_python.html" />
+    <link rel="prev" title="Intro 2: Statistik i Python" href="intro_2_statistik_i_python.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -109,14 +108,9 @@
    Intro 2: Statistik i Python
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="intro_3_diagram_i_python.html">
-   Intro 3: Diagram i Python
-  </a>
- </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Intro 3: Funktionsanpassning i Python
+   Intro 4: Funktionsanpassning i Python
   </a>
  </li>
 </ul>
@@ -239,8 +233,8 @@
         
               <div>
                 
-  <div class="section" id="intro-3-funktionsanpassning-i-python">
-<h1>Intro 3: Funktionsanpassning i Python<a class="headerlink" href="#intro-3-funktionsanpassning-i-python" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="intro-4-funktionsanpassning-i-python">
+<h1>Intro 4: Funktionsanpassning i Python<a class="headerlink" href="#intro-4-funktionsanpassning-i-python" title="Permalink to this headline">¶</a></h1>
 <p>I denna notebook ska vi bekanta oss med <em>funktionsanpassning</em>, ett mycket viktigt användningsområde för programmering inom fysiken. Vi kommer här att använda oss av <em>linjär regression</em> - anpassning av en förstagradsfunktion till givna datapunkter. En mer avancerad anpassning görs i dokumentet <em>“Att anpassa en funktion till ett diagram”</em>, som också hittas i denna Jupyter Book.</p>
 <p>Vi börjar med att importera de viktiga paketen <strong>matplotlib.pyplot</strong> och <strong>numpy</strong>. Vi kommer också senare att använda en funktion från <strong>scipy</strong>.</p>
 <div class="cell docutils container">
@@ -255,7 +249,7 @@
 <h2>Funktionsanpassning<a class="headerlink" href="#funktionsanpassning" title="Permalink to this headline">¶</a></h2>
 <p>När vi utför fysikaliska experiment vill vi ofta jämföra våra resultat med en teoretisk modell. Funktionsanpassningen är ett sätt för oss att se hur bra den teoretiska modellen följs.</p>
 <p>Som exempel kan vi tänka oss ett experiment som är typiskt för gymnasiets första fysikkurs. Eleverna blir tilldelade varierande järnföremål (vikter, bultar och muttrar, t.ex.), och uppgiften är att bestämma densiteten för järn.</p>
-<img src= "files/nutsnbolts.PNG" width = 300>
+<a class="reference internal image-reference" href="../_images/nutsnbolts.PNG"><img alt="../_images/nutsnbolts.PNG" src="../_images/nutsnbolts.PNG" style="width: 300px;" /></a>
 <p>Eleverna väger föremålen noga, och uppskattar föremålens volym genom geometriska beräkningar eller experimentellt genom att sänka dem i vatten (Arkimedes princip). Uppgiften är sedan att sammanställa resultaten i ett diagram och se det linjära sambandet. Vi tar en titt på detta diagram:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -285,7 +279,7 @@
 <p>Vi har mätresultaten i ett diagram, och vi ser att storheterna rimligen har ett linjärt förhållande. Genom att anpassa en linje och beräkna linjens riktningskoefficient får vi reda på densiteten för järn.</p>
 <div class="math notranslate nohighlight">
 \[ \rho = \frac{\Delta m}{\Delta V}\]</div>
-<img src="files/densitet.PNG" width=300>
+<a class="reference internal image-reference" href="ovningar/files/densitet.PNG"><img alt="ovningar/files/densitet.PNG" src="ovningar/files/densitet.PNG" style="width: 300px;" /></a>
 <p>I de första fysikkurserna anpassas den linjen ofta med ögonmått - uppskattad med linjal. Åtminstone gjorde man så innan GeoGebra och CAS-räknare blev allmänt använda och innan kursmaterialet var digitalt. Den noggrannheten är duglig i grundkurser, men självklart kommer resultaten att variera lite, och en mer exakt metod är viktig att känna till.</p>
 <p>Med hjälp av programmering kan vi optimera anpassningen. Ett sätt att göra detta är att använda <strong>scipy.stats.linregress</strong>. Den funktionen anpassar en linje till de givna punkterna.</p>
 <div class="cell docutils container">
@@ -299,7 +293,16 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LinregressResult(slope=7.588479595521847, intercept=1.1199891657638261, rvalue=0.9982889345678648, pvalue=8.494196166006045e-05, stderr=0.2566258120358384)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1760</span><span class="o">/</span><span class="mf">46064892.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">linregress</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">optimering</span> <span class="o">=</span> <span class="n">linregress</span><span class="p">(</span><span class="n">volymer</span><span class="p">,</span><span class="n">vikter</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="n">optimering</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;scipy&#39;
 </pre></div>
 </div>
 </div>
@@ -364,7 +367,7 @@ Du kan själv testa att anpassa en linje till ett eget set av datapunkter med sa
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="intro_3_diagram_i_python.html" title="previous page">Intro 3: Diagram i Python</a>
+    <a class='left-prev' id="prev-link" href="intro_2_statistik_i_python.html" title="previous page">Intro 2: Statistik i Python</a>
 
         </div>
         
