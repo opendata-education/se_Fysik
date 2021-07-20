@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -599,14 +599,15 @@
 <p>Till skillnad från de tidigare funktionerna använder plt.hist() bara <em>en</em> värdelista. För att testa funktionen skapar vi en lista med slumpmässiga värden.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span> <span class="k">as</span> <span class="nn">rand</span>        <span class="c1"># Random-paketet innehåller slumpfunktioner</span>
-<span class="n">histlist</span> <span class="o">=</span> <span class="p">[]</span>                <span class="c1"># Vi gör en tom lista, och fyller den sen.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy.random</span> <span class="k">as</span> <span class="nn">rand</span>        <span class="c1"># Random-paketet innehåller slumpfunktioner</span>
+<span class="n">histlist</span> <span class="o">=</span> <span class="p">[]</span>                      <span class="c1"># Vi gör en tom lista, och fyller den sen.</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>                            <span class="c1"># Detta är en for-loop. range(1000) betyder att den upprepas 50 gånger.</span>
-    <span class="n">i</span> <span class="o">=</span> <span class="n">rand</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span><span class="o">*</span><span class="n">rand</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>    <span class="c1"># Vi skapar ett värde, som produkten av två slumptal från 1 ill 10.</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>                            <span class="c1"># Detta är en for-loop. range(n) betyder att den upprepas n gånger.</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">rand</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span><span class="o">*</span><span class="n">rand</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span>    <span class="c1"># Vi skapar ett slumpvärdevärde som produkten av två heltal från 1 till 10.</span>
     <span class="n">histlist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>                           <span class="c1"># .append-kommandot lägger till värdet i listan.</span>
 
-<span class="c1"># Med print-kommandot kan man titta på listan om man vill.</span>
+<span class="c1"># Med print-kommandot kan man titta på listan.</span>
+<span class="c1"># Du kan ta bort #-tecknet om du vill:</span>
 <span class="c1"># print(histlist)</span>
 </pre></div>
 </div>
