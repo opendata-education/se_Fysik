@@ -1,0 +1,630 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Att anpassa en funktion till ett diagram &#8212; Fysik</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="canonical" href="https://opendata-education.github.io/se_Fysik/intro.html/ovningar/anpassa_funktion.html" />
+    <link rel="shortcut icon" href="../_static/logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Statistiska beräkningar med CMS’ data." href="Statistikber%C3%A4kningar.html" />
+    <link rel="prev" title="Intro 4: Funktionsanpassning i Python" href="intro_4_funktion_i_python.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Fysik</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Välkommen att använda Open Data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Övningar
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro_1_jupyter_python.html">
+   Intro 1: Använd Jupyter Notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro_2_statistik_i_python.html">
+   Intro 2: Statistik i Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro_3_diagram_i_python.html">
+   Intro 3: Diagram i Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro_4_funktion_i_python.html">
+   Intro 4: Funktionsanpassning i Python
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Att anpassa en funktion till ett diagram
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Statistikber%C3%A4kningar.html">
+   Statistiska beräkningar med CMS’ data.
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cms-exempel.html">
+   CMS och Open Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Animationsexempel.html">
+   Exempel på animation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Kartlagga_himlen.html">
+   Att kartlägga stjärnhimlen - Vad finns ovanför oss?
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/ovningar/anpassa_funktion.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/opendata-education/se_Fysik"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/opendata-education/se_Fysik/issues/new?title=Issue%20on%20page%20%2Fovningar/anpassa_funktion.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/opendata-education/se_Fysik/main?urlpath=tree/material/ovningar/anpassa_funktion.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hamta-och-rita-data">
+   Hämta och rita data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#skapa-en-modell-for-funktionen">
+   Skapa en modell för funktionen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#anpassa-funktionen">
+   Anpassa funktionen
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="att-anpassa-en-funktion-till-ett-diagram">
+<h1>Att anpassa en funktion till ett diagram<a class="headerlink" href="#att-anpassa-en-funktion-till-ett-diagram" title="Permalink to this headline">¶</a></h1>
+<p>I denna övning ska vi pröva på att anpassa en funktion till ett histogram. Funktionsanpassning är ett mycket användbart verktyg när man vill simplifiera statistik för beräkningar, eller jämföra resultat med en teoretisk modell. Inom partikelfysiken är detta användbart när vi vill avgöra position, höjd och bredd för en pik i ett histogram.</p>
+<p>Innan du tacklar detta exempel rekommederas att du har bekantat dig med dokumentet <strong>Intro 3: Funktionsanpassning i Python</strong>.</p>
+<p>Vi utgår från CMS’ partikelfysikdata gällande sådana kollisioner där två myoner uppstår. Datafilen <em>Dimuon_DoubleMu.csv</em> är hämtad från CERN:s opendata-portal och kan hittas i samma mapp som denna notebook.</p>
+<div class="section" id="hamta-och-rita-data">
+<h2>Hämta och rita data<a class="headerlink" href="#hamta-och-rita-data" title="Permalink to this headline">¶</a></h2>
+<p>Vi börjar med att ta in de relevanta funktionspaketen och läsa in datafilen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;Dimuon_DoubleMu.csv&#39;</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Run</th>
+      <th>Event</th>
+      <th>type1</th>
+      <th>E1</th>
+      <th>px1</th>
+      <th>py1</th>
+      <th>pz1</th>
+      <th>pt1</th>
+      <th>eta1</th>
+      <th>phi1</th>
+      <th>...</th>
+      <th>type2</th>
+      <th>E2</th>
+      <th>px2</th>
+      <th>py2</th>
+      <th>pz2</th>
+      <th>pt2</th>
+      <th>eta2</th>
+      <th>phi2</th>
+      <th>Q2</th>
+      <th>M</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>165617</td>
+      <td>74601703</td>
+      <td>G</td>
+      <td>9.6987</td>
+      <td>-9.5104</td>
+      <td>0.3662</td>
+      <td>1.8633</td>
+      <td>9.5175</td>
+      <td>0.1945</td>
+      <td>3.1031</td>
+      <td>...</td>
+      <td>G</td>
+      <td>9.7633</td>
+      <td>7.3277</td>
+      <td>-1.1524</td>
+      <td>6.3473</td>
+      <td>7.4178</td>
+      <td>0.7756</td>
+      <td>-0.1560</td>
+      <td>1</td>
+      <td>17.4922</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>165617</td>
+      <td>75100943</td>
+      <td>G</td>
+      <td>6.2039</td>
+      <td>-4.2666</td>
+      <td>0.4565</td>
+      <td>-4.4793</td>
+      <td>4.2910</td>
+      <td>-0.9121</td>
+      <td>3.0350</td>
+      <td>...</td>
+      <td>G</td>
+      <td>9.6690</td>
+      <td>7.2740</td>
+      <td>-2.8211</td>
+      <td>-5.7104</td>
+      <td>7.8019</td>
+      <td>-0.6786</td>
+      <td>-0.3700</td>
+      <td>1</td>
+      <td>11.5534</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>165617</td>
+      <td>75587682</td>
+      <td>G</td>
+      <td>19.2892</td>
+      <td>-4.2121</td>
+      <td>-0.6516</td>
+      <td>18.8121</td>
+      <td>4.2622</td>
+      <td>2.1905</td>
+      <td>-2.9881</td>
+      <td>...</td>
+      <td>G</td>
+      <td>9.8244</td>
+      <td>4.3439</td>
+      <td>-0.4735</td>
+      <td>8.7985</td>
+      <td>4.3697</td>
+      <td>1.4497</td>
+      <td>-0.1086</td>
+      <td>1</td>
+      <td>9.1636</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>165617</td>
+      <td>75660978</td>
+      <td>G</td>
+      <td>7.0427</td>
+      <td>-6.3268</td>
+      <td>-0.2685</td>
+      <td>3.0802</td>
+      <td>6.3325</td>
+      <td>0.4690</td>
+      <td>-3.0992</td>
+      <td>...</td>
+      <td>G</td>
+      <td>5.5857</td>
+      <td>4.4748</td>
+      <td>0.8489</td>
+      <td>-3.2319</td>
+      <td>4.5546</td>
+      <td>-0.6605</td>
+      <td>0.1875</td>
+      <td>1</td>
+      <td>12.4774</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>165617</td>
+      <td>75947690</td>
+      <td>G</td>
+      <td>7.2751</td>
+      <td>0.1030</td>
+      <td>-5.5331</td>
+      <td>-4.7212</td>
+      <td>5.5340</td>
+      <td>-0.7736</td>
+      <td>-1.5522</td>
+      <td>...</td>
+      <td>G</td>
+      <td>7.3181</td>
+      <td>-0.3988</td>
+      <td>6.9408</td>
+      <td>2.2825</td>
+      <td>6.9523</td>
+      <td>0.3227</td>
+      <td>1.6282</td>
+      <td>1</td>
+      <td>14.3159</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 21 columns</p>
+</div></div></div>
+</div>
+<p>Sedan ritar vi in statistiken från kolumnen <strong>M</strong> (Myonernas sammanlagda massa, mätt i GeV) i ett histogram.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/anpassa_funktion_6_0.png" src="../_images/anpassa_funktion_6_0.png" />
+</div>
+</div>
+<p>Vi märker att datan har en liten pik mellan 80 och 100 GeV, så vi vill rita ett nytt histogram över detta intervall. Obs: Denna gång sparar vi <code class="docutils literal notranslate"><span class="pre">plt.hist()</span></code>-funktionens värden. Funktionen återger tre värden, och vi vill använda de två första; staplarnas höjder (antal händelser) och gränser.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">undre_grans</span> <span class="o">=</span> <span class="mi">80</span>      <span class="c1"># Pro tip: Dessa värden kan skrivas in direkt i koden nedan, men det är praktiskt att</span>
+<span class="n">ovre_grans</span> <span class="o">=</span> <span class="mi">100</span>      <span class="c1">#  samla parametrar på ett ställe ifall man vill justera något i efterhand.</span>
+<span class="n">antal_staplar</span> <span class="o">=</span> <span class="mi">100</span>   <span class="c1"># Då behöver man inte söka genom koden för att se var man borde ändra</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">handelser</span><span class="p">,</span> <span class="n">granser</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="n">antal_staplar</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">(</span><span class="n">undre_grans</span><span class="p">,</span> <span class="n">ovre_grans</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Invariant massa (GeV)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Antal händelser&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/anpassa_funktion_8_0.png" src="../_images/anpassa_funktion_8_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="skapa-en-modell-for-funktionen">
+<h2>Skapa en modell för funktionen<a class="headerlink" href="#skapa-en-modell-for-funktionen" title="Permalink to this headline">¶</a></h2>
+<p>Vi vill anpassa en funktion till fördelningen ovan. Inom partikelfysik används ofta <a class="reference external" href="https://en.wikipedia.org/wiki/Relativistic_Breit%E2%80%93Wigner_distribution">Breit-Wigner -fördelningen</a> - en fördelning som påminner om normalfördelningen. I detta exempel använder vi dock Gauss’ normalfördelning, eftersom den är bekant.</p>
+<p>Normalfördelningens allmänna funktion med standardavvikelsen <span class="math notranslate nohighlight">\(\sigma\)</span> och medelvärdet <span class="math notranslate nohighlight">\(\mu\)</span> ser ut så här:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = \frac{1}{\sigma \sqrt{2\pi}}{e^{\frac{-(x-\mu)^2}{2\sigma^2}}}\]</div>
+<p>Vi <em>kan</em> anpassa den allmänna normalfördelningen till statistiken, men vi får ett betydligt bättre resultat om vi beaktar bakgrundsstrålningen också. Vi kan anta att bakgrundsstrålningen avtar linjärt i intervallet, så som skissen nedan antyder. Vi vill alltså lägga till en linjär funktion <span class="math notranslate nohighlight">\(bx + c\)</span> till fördelningen.</p>
+<a class="reference internal image-reference" href="ovningar/files/taustasateily.PNG"><img alt="ovningar/files/taustasateily.PNG" src="ovningar/files/taustasateily.PNG" style="width: 400px;" /></a>
+<p>Funktionen som ska anpassas blir då</p>
+<div class="math notranslate nohighlight">
+\[f(x) = ae^{\frac{-(x-\mu)^2}{2\sigma^2}} + bx + c\]</div>
+<p>där <span class="math notranslate nohighlight">\(a\)</span> är en koefficient som ersätter <span class="math notranslate nohighlight">\(\frac{1}{\sigma \sqrt{2\pi}}\)</span>, <span class="math notranslate nohighlight">\(\mu\)</span> är väntevärdet, <span class="math notranslate nohighlight">\(\sigma^2\)</span> variansen och <span class="math notranslate nohighlight">\(bx\)</span> och <span class="math notranslate nohighlight">\(c\)</span> är bakgrundsstrålningen.</p>
+<p>Vi definierar funktionen i python. Denna funktion har 5 obekanta variabler, så utan hjälpmedel skulle vi inte ha någon annan möjlighet än att gissa oss fram till en anpassning. Python klarar optimeringen fint.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">gauss</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">p</span><span class="p">):</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">p</span>
+    <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">mu</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="mf">2.</span><span class="o">*</span><span class="n">sigma</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span> <span class="o">+</span> <span class="n">b</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">c</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="anpassa-funktionen">
+<h2>Anpassa funktionen<a class="headerlink" href="#anpassa-funktionen" title="Permalink to this headline">¶</a></h2>
+<p>Nu ska vi anpassa funktionen med hjälp av <strong>scipy</strong>-paketets <strong>optimize.curve_fit</strong>-kommando. Vi börjar med att bestämma staplarnas mittvärden, så att anpassningen träffar rätt.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">curve_fit</span>
+
+<span class="c1"># Vi får staplarnas mitt genom att beräkna medelvärdet av deras gränser</span>
+<span class="n">medel</span> <span class="o">=</span> <span class="p">(</span><span class="n">granser</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">granser</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span><span class="o">/</span><span class="mi">2</span>
+
+<span class="c1"># För att göra en anpassning behövs någon sorts startvärden.</span>
+<span class="c1"># Vi gissar rimliga värden på a, mu, sigma, b och c i den ordningen.</span>
+<span class="n">p0</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># Vi beräknar de optimala koefficienterna </span>
+<span class="n">koefficienter</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">gauss</span><span class="p">,</span> <span class="n">medel</span><span class="p">,</span> <span class="n">handelser</span><span class="p">,</span> <span class="n">p0</span><span class="o">=</span><span class="n">p0</span><span class="p">)</span>
+
+<span class="c1"># Vi beräknar en anpassning med hjälp av koefficienterna</span>
+<span class="n">anpassning</span> <span class="o">=</span> <span class="n">gauss</span><span class="p">(</span><span class="n">medel</span><span class="p">,</span> <span class="o">*</span><span class="n">koefficienter</span><span class="p">)</span>
+
+<span class="c1"># Vi ritar ut histogramet tillsammans med den anpassade funktionen.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="n">antal_staplar</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">(</span><span class="n">undre_grans</span><span class="p">,</span> <span class="n">ovre_grans</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">medel</span><span class="p">,</span> <span class="n">anpassning</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;anpassning&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Invariant massa (GeV)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Antal händelser&#39;</span><span class="p">)</span>
+
+<span class="c1"># Vi skriver ut väntevärdet och pikens bredd (FWHM, https://sv.wikipedia.org/wiki/Halvv%C3%A4rdesbredd)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Väntevärde = &#39;</span><span class="p">,</span> <span class="n">koefficienter</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Pikbredd = &#39;</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span><span class="o">*</span><span class="n">koefficienter</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1685</span><span class="o">/</span><span class="mf">2914571853.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">curve_fit</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Vi får staplarnas mitt genom att beräkna medelvärdet av deras gränser</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">medel</span> <span class="o">=</span> <span class="p">(</span><span class="n">granser</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">granser</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span><span class="o">/</span><span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;scipy&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Med dessa resultat som grund kan vi uppskatta Z-bosonens massa till 90,86 GeV. Du kan testa själv: Hur ser anpassningen ut om du tar bort den linjära korrigeringen av bakgrundsstrålningen, eller om du använder <a class="reference external" href="https://en.wikipedia.org/wiki/Relativistic_Breit%E2%80%93Wigner_distribution">Breit-Wigner -fördelningen</a> istället? Ger Breit-Wigners en bättre anpassning än Gauss’ fördelning? Du kan också testa hur antalet staplar kan påverka resultatet.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./ovningar"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="intro_4_funktion_i_python.html" title="previous page">Intro 4: Funktionsanpassning i Python</a>
+    <a class='right-next' id="next-link" href="Statistikber%C3%A4kningar.html" title="next page">Statistiska beräkningar med CMS’ data.</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By HIP Education and Open Data Team<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a>Materialet utvecklas med stöd av utbildningsstyrelsen.</a></br><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="license" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> Tämän sivuston materiaali on käytettävissä seuraavalla lisenssillä: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY 4.0.</a>
+</div>    
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
