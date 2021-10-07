@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -42,7 +42,7 @@
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -73,6 +73,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../_static/logo.png" class="logo" alt="logo">
       
       
@@ -82,7 +86,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -244,7 +248,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#csv-filer">
@@ -298,6 +302,11 @@
      Enskild cell
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spara-binder">
+     Spara Binder
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -334,6 +343,9 @@ Eftersom största delen av open data-filer är tillgängliga som .csv, ska vi h�
 <div class="section" id="statistik-varldens-energiproduktion">
 <h2>Statistik: Världens energiproduktion<a class="headerlink" href="#statistik-varldens-energiproduktion" title="Permalink to this headline">¶</a></h2>
 <p>Den Notebook som du läser nu finns online på GitHub. I samma system av mappar på GitHub finns en csv-fil med information om världens energiproduktion 1800-2019. På GitHub, såväl som lokalt på din dator, kan du hänvisa till en fil med en <em>relativ sökväg</em>. Tillsammans med denna notebook finns mappen <strong>files</strong> och i den finns filen <strong>global-energy-substitution.csv</strong>. Vi kan alltså hitta filen med sökvägen “files/global-energy-substitution.csv”, och vi kan importera den till python med pandas-funktionen <strong>pd.read_csv()</strong>.</p>
+<blockquote>
+<div><p>Om du kör denna fil i Colab, eller om du kör den lokalt på din dator utan att ha laddat ned csv-filen också, så fungerar inte detta kommando. Då kan man istället hänvisa till filen med en länk: <code class="docutils literal notranslate"><span class="pre">&quot;https://raw.githubusercontent.com/opendata-education/se_Fysik/main/material/ovningar/files/global-energy-substitution.csv&quot;</span></code></p>
+</div></blockquote>
 <p>Vi sparar csv-filen som en DataFrame-variabel med namnet <strong>energi</strong>. Därefter kan vi se de första raderna av tabellen med hjälp av kommandot <strong>energi.head()</strong>, bara så vi vet om den lästes in rätt.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -515,6 +527,11 @@ Eftersom största delen av open data-filer är tillgängliga som .csv, ska vi h�
 </div>
 </div>
 </div>
+<div class="section" id="spara-binder">
+<h3>Spara Binder<a class="headerlink" href="#spara-binder" title="Permalink to this headline">¶</a></h3>
+<p>Du behöver spara dokumentet om du vill kunna visa upp vad du har gjort. På MyBinder görs detta enklast med knappen <em>Download</em> uppe i kanten. Man kan senare ladda upp den sparade notebooken.</p>
+<p>Om du gör uppgifterna i Colab eller lokalt, sparas dina ändringar automatiskt på din Drive eller på hårddisken.</p>
+</div>
 </div>
 </div>
 
@@ -541,16 +558,36 @@ Eftersom största delen av open data-filer är tillgängliga som .csv, ska vi h�
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="intro_1_jupyter_python.html" title="previous page">Intro 1: Använd Jupyter Notebooks</a>
-    <a class='right-next' id="next-link" href="intro_3_diagram_i_python.html" title="next page">Intro 3: Diagram i Python</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="intro_1_jupyter_python.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Intro 1: Använd Jupyter Notebooks</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="intro_3_diagram_i_python.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Intro 3: Diagram i Python</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
