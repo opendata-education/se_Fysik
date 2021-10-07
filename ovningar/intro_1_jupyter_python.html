@@ -353,7 +353,7 @@
 </div>
 <div class="section" id="matematiska-uttryck">
 <h3>3. Matematiska uttryck<a class="headerlink" href="#matematiska-uttryck" title="Permalink to this headline">¶</a></h3>
-<p>I textceller i Jupyter kan man använda <span class="math notranslate nohighlight">\(\LaTeX\)</span>-text. Om du inte har använt LaTeX är du kanske bekant med något annat program som använder det språket, till exempel MAOLs <a class="reference external" href="https://xn--lksyvihko-v2a.fi/">Läksyvihko</a>.</p>
+<p>I textceller i Jupyter kan man använda <span class="math notranslate nohighlight">\(\LaTeX\)</span>-text. Om du inte har använt LaTeX är du kanske bekant med något annat program som använder det språket, till exempel MAOLs <a class="reference external" href="https://xn--lksyvihko-v2a.fi/">Läksyvihko</a>. LaTeX är bra att kunna använda sig av när man vill inkludera formler i en labbrapport, till exempel.</p>
 <p>Genom att skriva <code class="docutils literal notranslate"><span class="pre">$</span></code>-tecken före och efter koden kan man få ekvationer mitt i en textrad, så här:  <span class="math notranslate nohighlight">\(\frac{d}{dx}e^x = e^x\)</span></p>
 <p>Om man skriver dubbla <code class="docutils literal notranslate"><span class="pre">$$</span></code>-tecken syns formeln på en egen rad. (öppna denna cell och se hur det ser ut)</p>
 <div class="math notranslate nohighlight">
@@ -365,7 +365,7 @@
 <div class="section" id="bilder-och-lankar">
 <h3>4. Bilder och länkar<a class="headerlink" href="#bilder-och-lankar" title="Permalink to this headline">¶</a></h3>
 <p>Om man skriver en artikel i en notebook vill man kanske lägga in bilder. kommandot för att göra detta är <code class="docutils literal notranslate"><span class="pre">&lt;img</span> <span class="pre">src=</span> <span class="pre">bildlänk</span>&#160;&#160; <span class="pre">&gt;</span></code> eller <code class="docutils literal notranslate"><span class="pre">![titel](bildlänk)</span></code></p>
-<p>Efter Istället för <strong>“bildlänk”</strong> fyller man i en webbadress till en bild. Då hämtar Jupyter automatiskt in bilden.</p>
+<p>Efter Istället för <strong>“bildlänk”</strong> fyller man i en webbadress till en bild. Då hämtar Jupyter automatiskt in bilden. Vad man skriver som titel har ingen praktisk betydelse.</p>
 <p>Om du har sparat denna notebook på din dator och öppnat den med Jupyter Notebooks kan du också skriva filnamnet på en bild som ligger i samma mapp som denna notebook på din dator.</p>
 <ul class="simple">
 <li><p>Skapa en ny cell, eller använd den nya cellen du skapade i uppgift 2.</p></li>
@@ -393,10 +393,10 @@
 <div class="section" id="error">
 <h3>2. Error<a class="headerlink" href="#error" title="Permalink to this headline">¶</a></h3>
 <p>Det sägs att det enda som är säkert i livet är döden och skattebetalningen, men för en programmerare är inget mer säkert än att koden förr eller senare avger ett felmeddelande.</p>
-<p>Ibland fungerar inte koden, och det kan vara så lite som ett enda tecken som är fel. Python innehåller inte någon funktion som rättar din kod, men felmeddelandet pekar ut <strong>var</strong> i koden felet finns. Seda får man lov att söka och testa tills man lyckas få koden att fungera.</p>
+<p>Ibland fungerar inte koden, och det kan vara så lite som ett enda tecken som är fel. Python innehåller inte någon funktion som rättar din kod, men felmeddelandet pekar ut <strong>var</strong> i koden felet finns. Sedan får man lov att söka och testa tills man lyckas få koden att fungera.</p>
 <ul class="simple">
 <li><p>Kör koden nedan. Den avger ett felmeddelande.</p></li>
-<li><p>Vad är felet i koden? Kan du fix.</p></li>
+<li><p>Vad är felet i koden? Kan du fixa felet?</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -405,7 +405,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_1734/2665266085.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_1727/2665266085.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">Att</span> <span class="n">fela</span> <span class="n">är</span> <span class="n">mänskligt</span><span class="o">.</span><span class="p">)</span>
               <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid syntax
@@ -446,7 +446,7 @@
 </div>
 <div class="section" id="funktionspaket">
 <h3>4. Funktionspaket<a class="headerlink" href="#funktionspaket" title="Permalink to this headline">¶</a></h3>
-<p>Pythons egna funktioner är ganska begränsade, men det finns många tilläggsmoduler, så kallade <em>paket</em> med funktioner som man kan importera till sin kod för att få fler möjligheter. Det är också möjligt för python-användare att skapa sina egna moduler.</p>
+<p>Pythons egna funktioner är ganska begränsade, men det finns många tilläggsmoduler, så kallade <em>paket</em>, med funktioner som man kan importera till sin kod för att få fler möjligheter. Det är också möjligt för python-användare att skapa sina egna moduler.</p>
 <p>Vi testar här att importera paketet <strong>numpy</strong>, som innehåller många funktioner för beräkningar.
 När vi har importerat numpy kan vi använda numpys funktioner om vi kallar på dem med prefixet <strong>numpy.</strong> Ett funktionspaket behöver bara hämtas en gång per dokument, men import-kommandot måste köras igen varje gång man startar om dokumentet.</p>
 <p>Vi kan också importera numpy med ett kortnamn och på så sätt förenkla prefixet.</p>
@@ -457,12 +457,12 @@ När vi har importerat numpy kan vi använda numpys funktioner om vi kallar på 
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># sinusfunktionen ingår i numpy-paketet. Vi beräknar sinus av vinkeln 0 rad. </span>
+<span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># sinusfunktionen ingår i numpy-paketet. Vi beräknar sinus av vinkeln 1 rad. </span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.8414709848078965
 </pre></div>
 </div>
 </div>
