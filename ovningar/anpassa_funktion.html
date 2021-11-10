@@ -556,18 +556,11 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1683</span><span class="o">/</span><span class="mf">2914571853.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">curve_fit</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Vi får staplarnas mitt genom att beräkna medelvärdet av deras gränser</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">medel</span> <span class="o">=</span> <span class="p">(</span><span class="n">granser</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">granser</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span><span class="o">/</span><span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> 
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;scipy&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Väntevärde =  90.85832625652122
+Pikbredd =  4.493052850735726
 </pre></div>
 </div>
+<img alt="../_images/anpassa_funktion_14_1.png" src="../_images/anpassa_funktion_14_1.png" />
 </div>
 </div>
 <p>Med dessa resultat som grund kan vi uppskatta Z-bosonens massa till 90,86 GeV. Du kan testa själv: Hur ser anpassningen ut om du tar bort den linjära korrigeringen av bakgrundsstrålningen, eller om du använder <a class="reference external" href="https://en.wikipedia.org/wiki/Relativistic_Breit%E2%80%93Wigner_distribution">Breit-Wigner -fördelningen</a> istället? Ger Breit-Wigners en bättre anpassning än Gauss’ fördelning? Du kan också testa hur antalet staplar kan påverka resultatet.</p>
