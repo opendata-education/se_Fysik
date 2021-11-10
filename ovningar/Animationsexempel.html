@@ -50,7 +50,6 @@
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://opendata-education.github.io/se_Fysik/intro.html/ovningar/Animationsexempel.html" />
-    <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Att kartlägga stjärnhimlen - Vad finns ovanför oss?" href="Kartlagga_himlen.html" />
@@ -73,11 +72,6 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
-      
-      
-      <img src="../_static/logo.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Fysik</h1>
@@ -328,7 +322,17 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1654</span><span class="o">/</span><span class="mf">2387219174.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/matplotlib/cbook/__init__.py</span> in <span class="ni">_setattr_cm</span><span class="nt">(obj, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2126</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">2127</span>         <span class="k">for</span> <span class="n">attr</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<span class="g g-Whitespace">   </span><span class="mi">2128</span>             <span class="nb">setattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">attr</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1651</span><span class="o">/</span><span class="mf">2387219174.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">9</span> 
 <span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="c1"># anim.to_jshtml() gör animationen till javascript så att den kan visas snyggt i notebooken.</span>
 <span class="ne">---&gt; </span><span class="mi">11</span> <span class="n">HTML</span><span class="p">(</span><span class="n">anim</span><span class="o">.</span><span class="n">to_jshtml</span><span class="p">())</span>
@@ -361,7 +365,7 @@
 <span class="g g-Whitespace">   </span><span class="mi">1777</span> 
 <span class="g g-Whitespace">   </span><span class="mi">1778</span>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_blit</span><span class="p">:</span>
 
-<span class="nn">/tmp/ipykernel_1654/2210453709.py</span> in <span class="ni">updt_hist</span><span class="nt">(num, iMass)</span>
+<span class="nn">/tmp/ipykernel_1651/2210453709.py</span> in <span class="ni">updt_hist</span><span class="nt">(num, iMass)</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="n">axes</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">8000</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">axes</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span>
 <span class="ne">---&gt; </span><span class="mi">10</span>     <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">iMass</span><span class="p">[:</span><span class="n">num</span><span class="o">*</span><span class="mi">480</span><span class="p">],</span> <span class="n">bins</span> <span class="o">=</span> <span class="mi">350</span><span class="p">)</span>
@@ -396,48 +400,48 @@
 <span class="g g-Whitespace">   </span><span class="mi">1363</span>         <span class="n">bound</span> <span class="o">=</span> <span class="n">new_sig</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
 <span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/matplotlib/axes/_axes.py</span> in <span class="ni">bar</span><span class="nt">(self, x, height, width, bottom, align, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2369</span>             <span class="k">elif</span> <span class="n">orientation</span> <span class="o">==</span> <span class="s1">&#39;horizontal&#39;</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">2370</span>                 <span class="n">r</span><span class="o">.</span><span class="n">sticky_edges</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">2371</span>             <span class="bp">self</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2372</span>             <span class="n">patches</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2373</span> 
+<span class="g g-Whitespace">   </span><span class="mi">2355</span>                    <span class="n">hatch</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2356</span>         <span class="k">for</span> <span class="n">l</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">lw</span><span class="p">,</span> <span class="n">htch</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">2357</span>             <span class="n">r</span> <span class="o">=</span> <span class="n">mpatches</span><span class="o">.</span><span class="n">Rectangle</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">2358</span>                 <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">b</span><span class="p">),</span> <span class="n">width</span><span class="o">=</span><span class="n">w</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">h</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">2359</span>                 <span class="n">facecolor</span><span class="o">=</span><span class="n">c</span><span class="p">,</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/matplotlib/axes/_base.py</span> in <span class="ni">add_patch</span><span class="nt">(self, p)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2168</span>         <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">get_clip_path</span><span class="p">()</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">2169</span>             <span class="n">p</span><span class="o">.</span><span class="n">set_clip_path</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">patch</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">2170</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_update_patch_limits</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2171</span>         <span class="bp">self</span><span class="o">.</span><span class="n">patches</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2172</span>         <span class="n">p</span><span class="o">.</span><span class="n">_remove_method</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">patches</span><span class="o">.</span><span class="n">remove</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/matplotlib/patches.py</span> in <span class="ni">__init__</span><span class="nt">(self, xy, width, height, angle, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">750</span>             <span class="o">%</span><span class="p">(</span><span class="n">Patch_kwdoc</span><span class="p">)</span><span class="n">s</span>
+<span class="g g-Whitespace">    </span><span class="mi">751</span>         <span class="sd">&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">752</span><span class="sd">         super().__init__(**kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">753</span><span class="sd">         self._x0 = xy[0]</span>
+<span class="g g-Whitespace">    </span><span class="mi">754</span><span class="sd">         self._y0 = xy[1]</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/matplotlib/axes/_base.py</span> in <span class="ni">_update_patch_limits</span><span class="nt">(self, patch)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2198</span>             <span class="n">updatex</span><span class="p">,</span> <span class="n">updatey</span> <span class="o">=</span> <span class="n">patch</span><span class="o">.</span><span class="n">get_transform</span><span class="p">()</span><span class="o">.</span>\
-<span class="g g-Whitespace">   </span><span class="mi">2199</span>                 <span class="n">contains_branch_seperately</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">transData</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">2200</span>             <span class="bp">self</span><span class="o">.</span><span class="n">update_datalim</span><span class="p">(</span><span class="n">xys</span><span class="p">,</span> <span class="n">updatex</span><span class="o">=</span><span class="n">updatex</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">2201</span>                                 <span class="n">updatey</span><span class="o">=</span><span class="n">updatey</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2202</span> 
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/matplotlib/patches.py</span> in <span class="ni">__init__</span><span class="nt">(self, edgecolor, facecolor, color, linewidth, linestyle, antialiased, hatch, fill, capstyle, joinstyle, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">106</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">107</span><span class="sd">         if len(kwargs):</span>
+<span class="ne">--&gt; </span><span class="mi">108</span><span class="sd">             self.update(kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">109</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">110</span><span class="sd">     def get_verts(self):</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/matplotlib/axes/_base.py</span> in <span class="ni">update_datalim</span><span class="nt">(self, xys, updatex, updatey)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2284</span>         <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">xys</span><span class="p">)):</span>
-<span class="g g-Whitespace">   </span><span class="mi">2285</span>             <span class="k">return</span>
-<span class="ne">-&gt; </span><span class="mi">2286</span>         <span class="bp">self</span><span class="o">.</span><span class="n">dataLim</span><span class="o">.</span><span class="n">update_from_data_xy</span><span class="p">(</span><span class="n">xys</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ignore_existing_data_limits</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">2287</span>                                          <span class="n">updatex</span><span class="o">=</span><span class="n">updatex</span><span class="p">,</span> <span class="n">updatey</span><span class="o">=</span><span class="n">updatey</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2288</span>         <span class="bp">self</span><span class="o">.</span><span class="n">ignore_existing_data_limits</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/matplotlib/artist.py</span> in <span class="ni">update</span><span class="nt">(self, props)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1045</span><span class="sd">         &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1046</span>         <span class="n">ret</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="ne">-&gt; </span><span class="mi">1047</span>         <span class="k">with</span> <span class="n">cbook</span><span class="o">.</span><span class="n">_setattr_cm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">eventson</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1048</span>             <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">props</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<span class="g g-Whitespace">   </span><span class="mi">1049</span>                 <span class="k">if</span> <span class="n">k</span> <span class="o">!=</span> <span class="n">k</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/matplotlib/transforms.py</span> in <span class="ni">update_from_data_xy</span><span class="nt">(self, xy, ignore, updatex, updatey)</span>
-<span class="g g-Whitespace">    </span><span class="mi">933</span> 
-<span class="g g-Whitespace">    </span><span class="mi">934</span>         <span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">xy</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">935</span>         <span class="bp">self</span><span class="o">.</span><span class="n">update_from_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">ignore</span><span class="o">=</span><span class="n">ignore</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">936</span>                               <span class="n">updatex</span><span class="o">=</span><span class="n">updatex</span><span class="p">,</span> <span class="n">updatey</span><span class="o">=</span><span class="n">updatey</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">937</span> 
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/contextlib.py</span> in <span class="ni">__enter__</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">111</span>         <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">kwds</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span>
+<span class="g g-Whitespace">    </span><span class="mi">112</span>         <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">113</span>             <span class="k">return</span> <span class="nb">next</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gen</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">114</span>         <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">115</span>             <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;generator didn&#39;t yield&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="bp">None</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/matplotlib/transforms.py</span> in <span class="ni">update_from_path</span><span class="nt">(self, path, ignore, updatex, updatey)</span>
-<span class="g g-Whitespace">    </span><span class="mi">898</span>             <span class="k">return</span>
-<span class="g g-Whitespace">    </span><span class="mi">899</span> 
-<span class="ne">--&gt; </span><span class="mi">900</span>         <span class="n">points</span><span class="p">,</span> <span class="n">minpos</span><span class="p">,</span> <span class="n">changed</span> <span class="o">=</span> <span class="n">update_path_extents</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">901</span>             <span class="n">path</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_points</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_minpos</span><span class="p">,</span> <span class="n">ignore</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">902</span> 
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/matplotlib/cbook/__init__.py</span> in <span class="ni">_setattr_cm</span><span class="nt">(obj, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2131</span>         <span class="k">for</span> <span class="n">attr</span><span class="p">,</span> <span class="n">orig</span> <span class="ow">in</span> <span class="n">origs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<span class="g g-Whitespace">   </span><span class="mi">2132</span>             <span class="k">if</span> <span class="n">orig</span> <span class="ow">is</span> <span class="n">sentinel</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">2133</span>                 <span class="nb">delattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2134</span>             <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">2135</span>                 <span class="nb">setattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">attr</span><span class="p">,</span> <span class="n">orig</span><span class="p">)</span>
 
-<span class="ne">KeyboardInterrupt</span>: 
+<span class="ne">AttributeError</span>: eventson
 </pre></div>
 </div>
 </div>
